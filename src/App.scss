@@ -1,0 +1,18 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.app {
+  background-color: var(--bg-color);
+  --bg-color: var(--gray-2);
+  --user-color: var(--green-9);
+  --gemini-orb-color-1: #54E8FF;
+  --gemini-orb-color-2: #C17BEE;
+  --gemini-orb-color-3: #FAA68D;
+}
+
+code {
+  font-family: var(--font-family-code);
+}

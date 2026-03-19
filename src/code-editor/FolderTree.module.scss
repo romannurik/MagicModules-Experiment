@@ -1,0 +1,79 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.folderTree {
+  font-size: 13px;
+  user-select: none;
+
+  :global {
+    .tree,
+    .tree-node,
+    .tree-node-group {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tree-branch-wrapper,
+    .tree-node__leaf {
+      outline: none;
+    }
+
+    .tree-node {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 2px 0;
+      border-radius: var(--radius-2);
+      position: relative;
+    }
+
+    .tree-node:hover {
+      background: color-mix(in srgb, currentColor 8%, transparent);
+    }
+
+    .tree .tree-node--focused,
+    .tree .tree-node--selected {
+      background: color-mix(in srgb, currentColor 14%, transparent);
+    }
+  }
+}
+
+.actionsButton {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  opacity: 0;
+
+  :global(.tree-node:hover) & {
+    opacity: 1;
+  }
+}
+
+.icon {
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 16px;
+  height: 16px;
+
+  .isLoading & {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.isLoading:global(.tree-node__leaf) .label,
+.isHidden:global(.tree-node__leaf) .label {
+  opacity: 0.5;
+}
+
+.loadingText {
+  padding-left: 4px;
+  opacity: 0.5;
+}

@@ -1,0 +1,70 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+@property --x {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --y {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --scale {
+  syntax: "<number>";
+  initial-value: 1;
+  inherits: false;
+}
+
+@keyframes sparkle-vert {
+  0% {
+    opacity: 0;
+    --y: 0;
+    --scale: 0;
+  }
+  5% {
+    opacity: 1;
+    --y: 0.05;
+    --scale: 1;
+  }
+  100% {
+    opacity: 0;
+    --y: 1;
+    --scale: 0;
+  }
+}
+
+@keyframes sparkle-horz {
+  0%, 50%, 100% {
+    --x: -1;
+  }
+  25%, 75% {
+    --x: 1;
+  }
+}
+
+.sparks {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.spark {
+  position: absolute;
+  transform: translate(
+      calc(-50% + var(--x) * 4px),
+      calc(var(--y) * -60px)
+    )
+    scale(var(--scale));
+  animation:
+    sparkle-vert 1s linear both,
+    sparkle-horz 1s ease-in-out both;
+}

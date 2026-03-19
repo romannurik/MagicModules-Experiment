@@ -1,0 +1,37 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+:root {
+  --font-family-body: -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  --font-family-code: 'Google Sans Code', monospace;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  interpolate-size: allow-keywords;
+  overflow: hidden;
+}
+
+.radix-themes.radix-themes {
+  --cursor-button: pointer;
+  --cursor-checkbox: pointer;
+  --cursor-disabled: default;
+  --cursor-link: pointer;
+  --cursor-menu-item: pointer;
+  --cursor-radio: pointer;
+  --cursor-slider-thumb: grab;
+  --cursor-slider-thumb-active: grabbing;
+  --cursor-switch: pointer;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

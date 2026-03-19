@@ -1,0 +1,107 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.editor {
+  background-color: var(--gray-2);
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: stretch;
+  padding: 16px;
+}
+
+.content {
+  display: grid;
+  grid-template:
+    "toolbar codeEditor preview" auto
+    "treeContainer codeEditor preview" 1fr / 300px 1fr 1fr;
+  gap: 8px;
+  min-height: 0;
+  flex: 1 1 0;
+}
+
+.toolbar {
+  grid-area: toolbar;
+  background-color: var(--gray-3);
+  display: flex;
+  align-items: center;
+  border-radius: var(--radius-2);
+  padding: 8px;
+  gap: 8px;
+}
+
+.treeContainer {
+  grid-area: treeContainer;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  gap: 12px;
+}
+
+.tree {
+  flex: 1 1 0;
+}
+
+.notices {
+  flex: 0 0 auto;
+  min-width: 0;
+
+  ol,
+  ul {
+    padding-left: 16px;
+    li + li {
+      margin-top: 8px;
+    }
+  }
+
+  *:last-child {
+    margin-bottom: 0;
+  }
+
+  pre {
+    margin: 2px 0;
+    white-space: pre-wrap;
+    font-family: var(--font-family-code);
+    font-weight: 500;
+  }
+
+  pre,
+  code,
+  .shortcut {
+    color: var(--sky-11);
+  }
+}
+
+.codeEditor,
+.specEditor {
+  grid-area: codeEditor;
+}
+
+.preview {
+  grid-area: preview;
+}
+
+.codeEditor,
+.specEditor,
+.preview {
+  min-width: 0;
+  flex: 1 1 0;
+  --radius: var(--radius-3);
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-6);
+}
+
+.specEditor,
+.preview {
+  overflow: hidden;
+}
+
+.specEditor {
+  background-color: var(--gray-1);
+}

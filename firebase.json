@@ -1,0 +1,42 @@
+{
+  "$schema": "https://raw.githubusercontent.com/firebase/firebase-tools/refs/heads/master/schema/firebase-config.json",
+  "hosting": {
+    "site": "threeplabs",
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "headers": [
+      {
+        "regex": "/.*",
+        "headers": [
+          {
+            "key": "Cross-Origin-Embedder-Policy",
+            "value": "require-corp"
+          },
+          {
+            "key": "Cross-Origin-Opener-Policy",
+            "value": "same-origin"
+          }
+        ]
+      },
+      {
+        "regex": "/__auth.*",
+        "headers": [
+          {
+            "key": "Cross-Origin-Embedder-Policy",
+            "value": "unsafe-none"
+          },
+          {
+            "key": "Cross-Origin-Opener-Policy",
+            "value": "unsafe-none"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

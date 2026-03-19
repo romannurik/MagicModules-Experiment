@@ -1,0 +1,20 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+pre.codeDiff {
+  white-space: pre;
+  overflow-x: auto;
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  align-items: center;
+  justify-content: center;
+}

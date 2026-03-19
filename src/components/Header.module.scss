@@ -1,0 +1,103 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.header {
+  display: flex;
+  align-items: center;
+  margin: 0 0 16px;
+  gap: 20px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logoButton {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+
+  > * {
+    grid-area: 1 / 1;
+  }
+
+  .logoMenuIcon {
+    visibility: hidden;
+  }
+
+  &:hover,
+  &:focus-visible {
+    .logo {
+      visibility: hidden;
+    }
+    .logoMenuIcon {
+      visibility: visible;
+    }
+  }
+}
+
+.docTitle {
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 4px;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 4px 0 4px;
+  border-radius: 4px;
+
+  &:global(.is-target):hover {
+    outline: 1px solid var(--gray-10);
+  }
+
+  &:global(.is-editing) {
+    outline: 2px solid var(--accent-10);
+  }
+}
+
+.huddle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  margin: -8px 0;
+  box-shadow: 0 0 0 2px var(--green-7);
+  animation: pulsate-border 3s infinite;
+  border-radius: 999px;
+
+  @keyframes pulsate-border {
+    0%,
+    100% {
+      box-shadow: 0 0 0 2px var(--green-6);
+    }
+
+    50% {
+      box-shadow: 0 0 0 2px var(--green-10);
+    }
+  }
+
+  &.isJoined {
+    background-color: var(--red-3);
+    box-shadow: 0 0 0 2px var(--red-7);
+    animation: none;
+  }
+}
+
+.header hr {
+  margin: 0 -2px;
+  height: 100%;
+  border: 0;
+  border-right: 1px solid var(--gray-6);
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}

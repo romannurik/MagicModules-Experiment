@@ -1,0 +1,170 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.agent {
+  display: flex;
+  flex-direction: column;
+}
+
+.prompt {
+  flex: 0;
+}
+
+.zeroState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 400px;
+  height: stretch;
+  width: stretch;
+
+  .icon {
+    border-radius: var(--radius-3);
+    background-color: var(--gray-4);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    margin-top: 8px;
+  }
+
+  .description {
+    margin-top: 2px;
+  }
+
+  .cta {
+    margin-top: 16px;
+  }
+}
+
+.history {
+  flex: 1 1 0;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 0 16px;
+
+  >* {
+    min-height: 0;
+    flex-shrink: 0;
+  }
+}
+
+.message {
+  font-size: 13px;
+
+  &.isUser {
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+    align-self: end;
+    background-color: var(--gray-5);
+    padding: 6px 12px;
+    border-radius: var(--radius-3);
+  }
+}
+
+.spinner {
+  margin-top: 4px;
+}
+
+.markdown {
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  code {
+    font-family: var(--font-family-code);
+    background-color: var(--gray-5);
+    padding: 1px 2px;
+    border-radius: var(--radius-1);
+  }
+}
+
+.activityBlock {
+  margin: 6px 0;
+
+  .icon {
+    flex: 0 0 auto;
+  }
+
+  .button {
+    white-space: nowrap;
+    max-width: 100%;
+  }
+}
+
+.toolCallArg {
+  .toolCallArgKey {
+    color: var(--cyan-11);
+  }
+}
+
+.toolCallPart {
+  pre,
+  .toolCallArg code {
+    border: 1px solid var(--gray-4);
+    border-radius: var(--radius-1);
+    font-family: var(--font-family-code);
+    padding: 4px;
+    white-space: pre-wrap;
+    color: var(--green-11);
+  }
+}
+
+.activityDetail {
+  padding-left: 12px;
+  margin: 4px 0 12px 7px;
+  border-left: 1px solid var(--gray-6);
+}
+
+.activityActiveShimmer {
+  color: transparent;
+  animation: shimmer-gradient 1s ease-in-out infinite;
+  background-clip: text;
+
+  @keyframes shimmer-gradient {
+
+    0%,
+    100% {
+      background-image: linear-gradient(to right,
+          var(--gray-9) 33%,
+          var(--gray-11) 50%,
+          var(--gray-9) 66%);
+      background-size: 300% 100%;
+    }
+
+    0% {
+      background-position: 100% 0%;
+    }
+
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+}
+
+.subLabel {
+  color: var(--gray-10);
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

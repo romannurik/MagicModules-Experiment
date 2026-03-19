@@ -1,0 +1,149 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { SVGAttributes } from "react";
+
+export function Logo({
+  size,
+  ...props
+}: SVGAttributes<SVGSVGElement> & {
+  size?: number;
+}) {
+  return (
+    <svg
+      {...props}
+      width={size || 64}
+      height={size || 64}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="24" height="24" rx="6" fill="url(#paint0_linear_475_210)" />
+      <g fillOpacity="0.8" fill="black">
+        <rect rx="0.33" ry="0.33" x="14" y="4" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="15" y="4" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="13" y="5" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="14" y="5" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="15" y="5" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="16" y="5" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="6" y="6" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="7" y="6" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="12" y="6" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="13" y="6" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="15" y="6" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="16" y="6" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="7" y="7" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="8" y="7" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="11" y="7" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="12" y="7" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="15" y="7" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="16" y="7" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="10" y="8" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="11" y="8" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="14" y="8" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="15" y="8" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="18" y="8" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="19" y="8" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="5" y="9" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="6" y="9" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="10" y="9" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="11" y="9" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="14" y="9" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="15" y="9" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="17" y="9" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="18" y="9" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="6" y="10" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="7" y="10" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="9" y="10" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="10" y="10" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="13" y="10" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="14" y="10" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="9" y="11" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="10" y="11" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="13" y="11" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="14" y="11" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="17" y="11" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="18" y="11" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="9" y="12" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="10" y="12" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="14" y="12" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="15" y="12" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="18" y="12" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="19" y="12" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="8" y="13" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="9" y="13" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="14" y="13" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="15" y="13" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="8" y="14" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="9" y="14" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="14" y="14" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="15" y="14" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="6" y="15" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="7" y="15" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="8" y="15" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="9" y="15" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="10" y="15" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="11" y="15" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="12" y="15" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="13" y="15" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="14" y="15" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="15" y="15" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="16" y="15" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="17" y="15" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="5" y="16" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="6" y="16" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="9" y="16" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="10" y="16" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="11" y="16" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="12" y="16" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="13" y="16" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="14" y="16" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="17" y="16" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="18" y="16" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="5" y="17" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="6" y="17" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="7" y="17" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="16" y="17" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="17" y="17" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="18" y="17" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="6" y="18" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="7" y="18" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="8" y="18" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="9" y="18" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="10" y="18" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="11" y="18" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="12" y="18" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="13" y="18" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="14" y="18" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="15" y="18" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="16" y="18" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="17" y="18" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="8" y="19" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="9" y="19" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="10" y="19" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="11" y="19" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="12" y="19" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="13" y="19" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="14" y="19" width="1" height="1" />
+        <rect rx="0.33" ry="0.33" x="15" y="19" width="1" height="1" />
+      </g>
+      <defs>
+        <linearGradient
+          id="paint0_linear_475_210"
+          x1="22.5"
+          y1="2"
+          x2="1.5"
+          y2="22"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FFF691" />
+          <stop offset="0.5" stopColor="#8FE787" />
+          <stop offset="1" stopColor="#07D5D1" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}

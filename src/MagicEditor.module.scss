@@ -1,0 +1,190 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.magicEditor {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.markdownEditorContent {
+  padding: 16px 20px;
+  box-sizing: border-box;
+}
+
+.sectionBar {
+  padding: 4px 20px;
+  min-height: 44px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: color-mix(in srgb, var(--gray-1) 60%, transparent);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &:not(:first-child) {
+    border-top: 1px solid var(--gray-6);
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}
+
+.verifications {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 20px 20px 20px;
+}
+
+.dropdownItemWithDetail {
+  height: auto;
+  padding-top: var(--space-1);
+  padding-bottom: var(--space-1);
+  align-items: start;
+
+  .dropdownItemIcon {
+    margin-top: 2px;
+  }
+
+  .dropdownItemDetail {
+    font-size: 12px;
+    line-height: 16px;
+    opacity: 0.7;
+    margin-top: 2px;
+    max-width: 200px;
+  }
+}
+
+.verification {
+  padding: 8px 16px;
+  display: grid;
+  align-items: center;
+  grid-template:
+    "icon title actions" auto
+    "detail detail detail" auto / auto 1fr auto;
+
+  &.isEditing {
+    grid-template:
+      "icon title" auto
+      "detail detail" auto / auto 1fr;
+  }
+  gap: 0 12px;
+  background-color: var(--gray-2);
+  border-radius: var(--radius-2);
+  border: 1px solid var(--gray-6);
+
+  .icon {
+    grid-area: icon;
+    color: var(--gray-10);
+  }
+
+  .title {
+    grid-area: title;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2px 8px;
+  }
+
+  .title,
+  .verificationTitleEditor input {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  .actions {
+    grid-area: actions;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: -8px;
+    min-height: 32px;
+  }
+
+  .verificationDetail {
+    margin-top: 8px;
+    grid-area: detail;
+
+    pre {
+      font-family: var(--font-family-code);
+      font-size: 12px;
+      line-height: 16px;
+      white-space: pre-wrap;
+      color: var(--red-11);
+    }
+  }
+
+  .agentSession {
+    height: 300px;
+    max-height: 70vh;
+  }
+
+  .verificationEditor {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    label {
+      cursor: pointer;
+
+      + label {
+        margin-top: 4px;
+      }
+
+      > span {
+        font-size: 13px;
+        line-height: 20px;
+        color: var(--gray-11);
+        font-weight: 500;
+        display: block;
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  .editActions {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .verificationPrompt {
+    textarea {
+      --text-area-padding-x: 16px;
+      --text-area-padding-y: 12px;
+      field-sizing: content;
+    }
+  }
+
+  .verificationCodeEditor {
+    border: 1px solid var(--gray-a7);
+    border-radius: var(--radius-2);
+
+    :global .monaco-editor {
+      min-height: 96px;
+    }
+  }
+
+  .autoGenButton {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+  }
+}

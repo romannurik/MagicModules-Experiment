@@ -1,0 +1,26 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+@mixin card {
+  background-color: rgba(255 255 255 / 0.15);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 0 1px rgba(0 0 0 / 15%),
+    0 3px 6px rgba(0 0 0 / 15%),
+    0 0 0 1px rgba(255 255 255 / 10%) inset;
+  @include squircle(16px);
+}
+
+@mixin squircle($radius) {
+  --border-radius: #{$radius};
+  border-radius: var(--border-radius);
+
+  @supports (corner-shape: superellipse(1)) {
+    border-radius: calc(var(--border-radius) * 1.4);
+    corner-shape: superellipse(1.4);
+  }
+}

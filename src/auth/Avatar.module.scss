@@ -1,0 +1,16 @@
+/**
+ * @license
+ * Copyright 2026 Google LLC
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+:where(.avatar) {
+  --size: 28px;
+  width: var(--size);
+  height: var(--size);
+  max-width: var(--size);
+  max-height: var(--size);
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: #eee;
+}
